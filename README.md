@@ -15,7 +15,9 @@ In `routes/web.php` add a line:
 ConsoleOverHttp::endpoint();
 ```
 
-And configure an environment variable `CONSOLE_OVER_HTTP_TOKEN` to secure the endpoint.
+Configure an environment variable `CONSOLE_OVER_HTTP_TOKEN` to secure the endpoint.
+
+Visit the route in your app, e.g. http://localhost:4000/console?command=php%20artisan%20inspire&token=your-token
 
 ### Example - insecure usage
 
