@@ -15,11 +15,15 @@ In `routes/web.php` add a line:
 ConsoleOverHttp::endpoint();
 ```
 
+And configure an environment variable `CONSOLE_OVER_HTTP_TOKEN` to secure the endpoint.
+
 ### Example - insecure usage
 
 ```
 ConsoleOverHttp::endpoint()->insecure();
 ```
+
+Or set the environments variable `CONSOLE_OVER_HTTP_INSECURE=true`.
 
 ### Example - custom authentication logic
 

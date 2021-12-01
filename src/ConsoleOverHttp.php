@@ -7,6 +7,11 @@ class ConsoleOverHttp
     protected $insecure = false;
     protected $authFunction = null;
 
+    public function __construct()
+    {
+        $this->insecure = config('console-over-http.insecure');
+    }
+
     public function endpoint()
     {
         app()->make('router')->console();

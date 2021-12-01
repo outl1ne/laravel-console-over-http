@@ -42,6 +42,10 @@ class Middleware
             return abort(401);
         }
 
+        if ($token === null) {
+            return abort(401);
+        }
+
         if (!hash_equals($configuredToken, $token)) {
             return abort(401);
         }
