@@ -23,7 +23,7 @@ And configure an environment variable `CONSOLE_OVER_HTTP_TOKEN` to secure the en
 ConsoleOverHttp::endpoint()->insecure();
 ```
 
-Or set the environments variable `CONSOLE_OVER_HTTP_INSECURE=true`.
+Or set the environment variable `CONSOLE_OVER_HTTP_INSECURE=true`.
 
 ### Example - custom authentication logic
 
