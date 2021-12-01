@@ -18,6 +18,10 @@ class Middleware
     {
         $consoleOverHttp = app()->make(ConsoleOverHttp::class);
 
+        if ($consoleOverHttp->hasAuth() && !$consoleOverHttp->checkAuth()) {
+            return abort(401);
+        }
+
         if (!$consoleOverHttp->isInsecure()) {
             $this->checkToken($this->getToken($request));
         }

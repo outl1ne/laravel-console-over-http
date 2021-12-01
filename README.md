@@ -15,6 +15,20 @@ In `routes/web.php` add a line:
 ConsoleOverHttp::endpoint();
 ```
 
+### Example - insecure usage
+
+```
+ConsoleOverHttp::endpoint()->insecure();
+```
+
+### Example - custom authentication logic
+
+```
+ConsoleOverHttp::endpoint()->auth(function () {
+    return \Auth::check();
+});
+```
+
 ## Installation
 
 Install the package in a Laravel project via Composer:
