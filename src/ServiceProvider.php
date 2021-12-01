@@ -13,6 +13,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/console-over-http.php', 'console-over-http');
+
+        $this->app->singleton(ConsoleOverHttp::class, function () {
+            return new ConsoleOverHttp;
+        });
     }
 
     /**

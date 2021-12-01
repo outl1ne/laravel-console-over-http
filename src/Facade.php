@@ -6,17 +6,8 @@ class Facade extends \Illuminate\Support\Facades\Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'console-over-http';
-    }
+        self::clearResolvedInstance(ConsoleOverHttp::class);
 
-    /**
-     * Register the endpoint
-     *
-     * @param  array  $options
-     * @return void
-     */
-    public static function endpoint()
-    {
-        static::$app->make('router')->console();
+        return ConsoleOverHttp::class;
     }
 }
