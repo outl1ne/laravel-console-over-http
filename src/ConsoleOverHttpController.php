@@ -16,6 +16,7 @@ class ConsoleOverHttpController extends BaseController
 
         $process = new Process(explode(' ', $data['command']));
         $process->setWorkingDirectory(base_path());
+        $process->setTimeout(config('console-over-http.process.timeout'));
         $process->start();
 
         echo '<html><body style="background:#000;font-family:monospace;">';
