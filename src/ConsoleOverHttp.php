@@ -12,7 +12,7 @@ class ConsoleOverHttp
         $this->insecure = config('console-over-http.insecure');
     }
 
-    public function endpoint()
+    public function endpoint(): self
     {
         app()->make('router')->console();
 
