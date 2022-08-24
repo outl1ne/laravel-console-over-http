@@ -1,10 +1,10 @@
 {
-  "name": "optimistdigital/laravel-console-over-http",
+  "name": "outl1ne/laravel-console-over-http",
   "description": "Run console commands over HTTP connection for Laravel applications.",
   "keywords": [
     "laravel",
     "console",
-    "optimistdigital"
+    "outl1ne"
   ],
   "license": "MIT",
   "require": {
@@ -13,16 +13,16 @@
   },
   "autoload": {
     "psr-4": {
-      "OptimistDigital\\LaravelConsoleOverHttp\\": "src/"
+      "Outl1ne\\LaravelConsoleOverHttp\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "OptimistDigital\\LaravelConsoleOverHttp\\ServiceProvider"
+        "Outl1ne\\LaravelConsoleOverHttp\\ServiceProvider"
       ],
       "aliases": {
-        "ConsoleOverHttp": "OptimistDigital\\LaravelConsoleOverHttp\\Facade"
+        "ConsoleOverHttp": "Outl1ne\\LaravelConsoleOverHttp\\Facade"
       }
     }
   },

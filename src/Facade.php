@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\LaravelConsoleOverHttp;
+namespace Outl1ne\LaravelConsoleOverHttp;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {

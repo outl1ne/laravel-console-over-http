@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\LaravelConsoleOverHttp;
+namespace Outl1ne\LaravelConsoleOverHttp;
 
 use Closure;
 use Illuminate\Http\Request;

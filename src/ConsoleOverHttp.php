@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\LaravelConsoleOverHttp;
+namespace Outl1ne\LaravelConsoleOverHttp;
 
 class ConsoleOverHttp
 {

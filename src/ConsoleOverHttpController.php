@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\LaravelConsoleOverHttp;
+namespace Outl1ne\LaravelConsoleOverHttp;
 
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
