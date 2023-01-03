@@ -25,7 +25,7 @@ class ConsoleOverHttpController extends BaseController
 
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                if($debugLogsEnabled) Log::info($data);
+                if ($debugLogsEnabled) Log::info($data);
                 echo "\n<span style='color:#ccc'>" . $data . "</span><br />";
             } else {
                 Log::error($data);
