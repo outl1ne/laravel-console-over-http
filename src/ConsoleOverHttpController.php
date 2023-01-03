@@ -5,6 +5,7 @@ namespace Outl1ne\LaravelConsoleOverHttp;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
+use Illuminate\Support\Facades\Log;
 
 class ConsoleOverHttpController extends BaseController
 {
@@ -20,13 +21,14 @@ class ConsoleOverHttpController extends BaseController
         $process->start();
 
         echo '<html><body style="background:#000;font-family:monospace;">';
+        $debugLogsEnabled = config('console-over-http.debug_logs');
 
         foreach ($process as $type => $data) {
             if ($process::OUT === $type) {
-                \Log::info($data);
+                if ($debugLogsEnabled) Log::info($data);
                 echo "\n<span style='color:#ccc'>" . $data . "</span><br />";
             } else {
-                \Log::error($data);
+                Log::error($data);
                 echo "\n<span style='color:red'>" . $data . "</span><br />";
             }
         }
